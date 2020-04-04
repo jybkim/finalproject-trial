@@ -1,0 +1,12 @@
+name: finalproject-trial-shiny
+title: finalproject-trial-shiny
+username:
+account: jansez1311
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2054366
+bundleId: 2966753
+url: https://jansez1311.shinyapps.io/finalproject-trial-shiny/
+when: 1585958561.0682
+asMultiple: FALSE
+asStatic: FALSE
