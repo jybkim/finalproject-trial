@@ -21,7 +21,7 @@ library(magrittr)
 library(reprex)
 library(gganimate)
 library(magick)
-library(transformr)
+# library(transformr)
 
 # used devtools::install_github("thomasp85/transformr") to install transformr package
 
@@ -239,13 +239,18 @@ PR_twoparty$ideavoteshare <- ifelse(PR_twoparty$year == 1988 &
 
 # change cons_or_not to factor?
 
-PR_twopartyvoteshare$cons_or_not <- as.factor(PR_twopartyvoteshare$cons_or_not)
+# write.csv(PR_twopartyvoteshare, "PRtwoparty.csv")
+# 
+# PR_twopartyvoteshare <- read.csv("PRtwoparty.csv") %>%
+#   clean_names()
+
+# PR_twopartyvoteshare$cons_or_not <- as.factor(PR_twopartyvoteshare$cons_or_not)
 
 
 # ggplot by ideology
 
 graphideology <- PR_twopartyvoteshare %>%
-  ggplot(aes(x = year, y = pct_total, color = cons_or_not)) +
+  ggplot(aes(x = year, y = pct_total, color = factor(cons_or_not))) +
   geom_line(show.legend = FALSE) +
   scale_colour_manual(values = c("blue", "red")) + 
   
